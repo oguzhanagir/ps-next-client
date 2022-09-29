@@ -3,10 +3,11 @@
 import { jsx, Box, Container, Button } from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
-import { NavLink } from 'components/link';
+import { Link, NavLink } from 'components/link';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
 import NavbarDrawer from './navbar-drawer';
 import menuItems from './header.data';
+import LinkNext from 'react-scroll/modules/components/Link';
 
 export default function Header() {
   return (
@@ -25,10 +26,17 @@ export default function Header() {
                       </li>
                     ))}
                   </Box>
+                  <LinkNext href="/login" >
+                  <Button variant="text" sx={styles.getStartedDesktop}>
+                    Login
+                  </Button>
+                  </LinkNext>
                   <Button variant="text" sx={styles.getStartedDesktop}>
                     Get Started
                   </Button>
+
                 </Box>
+                
                 <Button variant="text" sx={styles.getStartedMobile}>
                   Get Started
                 </Button>
