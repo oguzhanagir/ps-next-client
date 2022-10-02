@@ -5,7 +5,8 @@ import { jsx, Box, Container, Button } from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
-import Link from 'next/link'
+
+
 
 export default function Header() {
   return (
@@ -19,9 +20,17 @@ export default function Header() {
                 <Box as="nav" sx={styles.navbar} className="navbar">
                   
                   <Box as="ul" sx={styles.navList}>
-                    <li>Deneme</li>
-                    
+                 
+                  <li className='nav-item'>Ana Sayfa</li>
+                  <li className='nav-item'>Hakkımızda</li>
+                  <li className='nav-item'>Ürünler</li>
+                  <li className='nav-item'>Taşıyıcılar</li>
+                  <li className='nav-item'>İletişim</li>
+                  <li className='nav-item'></li>
+                  
                   </Box>
+                  
+                  
                  
                   <Button variant="text" sx={styles.getStartedDesktop}>
                     Login
@@ -82,6 +91,7 @@ const styles = {
     // justifyContent: 'center',
   },
   navList: {
+
     display: ['flex'],
     listStyle: 'none',
     // marginLeft: 'auto',
@@ -89,6 +99,7 @@ const styles = {
     p: 0,
     'li:last-child': {
       ml: ['auto'],
+      
     },
     '.nav-item': {
       cursor: 'pointer',
