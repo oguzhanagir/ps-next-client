@@ -1,13 +1,11 @@
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Container, Button } from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
-import { Link, NavLink } from 'components/link';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
-import NavbarDrawer from './navbar-drawer';
-import menuItems from './header.data';
-import LinkNext from 'react-scroll/modules/components/Link';
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -19,18 +17,15 @@ export default function Header() {
               <Box sx={styles.headerInner}>
                 <Logo sx={styles.logo} />
                 <Box as="nav" sx={styles.navbar} className="navbar">
+                  
                   <Box as="ul" sx={styles.navList}>
-                    {menuItems.map(({ path, label }, i) => (
-                      <li key={i}>
-                        <NavLink path={path} label={label} />
-                      </li>
-                    ))}
+                    <li>Deneme</li>
+                    
                   </Box>
-                  <LinkNext href="/login" >
+                 
                   <Button variant="text" sx={styles.getStartedDesktop}>
                     Login
                   </Button>
-                  </LinkNext>
                   <Button variant="text" sx={styles.getStartedDesktop}>
                     Get Started
                   </Button>
@@ -40,7 +35,7 @@ export default function Header() {
                 <Button variant="text" sx={styles.getStartedMobile}>
                   Get Started
                 </Button>
-                <NavbarDrawer />
+                {/* <NavbarDrawer /> */}
               </Box>
             </Container>
           </Box>

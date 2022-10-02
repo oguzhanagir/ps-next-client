@@ -3,8 +3,6 @@
 import { jsx, Box, Text, Container } from 'theme-ui';
 import Logo from 'components/logo';
 import { Link } from 'components/link';
-import Widget from './widget';
-import { menuItems } from './footer.data';
 import { rgba } from 'polished';
 
 export default function Footer() {
@@ -25,9 +23,6 @@ export default function Footer() {
               Copyright by {new Date().getFullYear()} RedQ, Inc
             </Text>
           </Box>
-          {menuItems.map(({ id, title, items }) => (
-            <Widget key={id} title={title} items={items} />
-          ))}
         </Box>
       </Container>
     </Box>
