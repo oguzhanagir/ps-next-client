@@ -5,7 +5,7 @@ import { jsx, Box, Container, Button } from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
-
+import { Link } from 'react-scroll';
 
 
 export default function Header() {
@@ -21,11 +21,13 @@ export default function Header() {
                   
                   <Box as="ul" sx={styles.navList}>
                  
-                  <li className='nav-item'>Ana Sayfa</li>
-                  <li className='nav-item'>Hakkımızda</li>
-                  <li className='nav-item'>Ürünler</li>
-                  <li className='nav-item'>Taşıyıcılar</li>
-                  <li className='nav-item'>İletişim</li>
+                  <li ><Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ana Sayfa</Link></li>
+                  
+                  <li ><Link to="services" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ürünler</Link></li>
+                  <li><Link to="team" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Taşıyıcılar</Link></li>
+                  <li ><Link  to="why-us" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Hakkımızda</Link></li>
+                  <li ><Link to="blog" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">İletişim</Link></li>
+                  
                   <li className='nav-item'></li>
                   
                   </Box>
@@ -33,16 +35,16 @@ export default function Header() {
                   
                  
                   <Button variant="text" sx={styles.getStartedDesktop}>
-                    Login
+                    <a href='/login' style={{ textDecoration: 'none',color: '#00CCFF' }}>Login</a>
                   </Button>
                   <Button variant="text" sx={styles.getStartedDesktop}>
-                    Get Started
+                    <a href='/register' style={{ textDecoration: 'none',color: '#00CCFF' }}>Get Started</a>
                   </Button>
 
                 </Box>
                 
                 <Button variant="text" sx={styles.getStartedMobile}>
-                  Get Started
+                <a href='/register' style={{ textDecoration: 'none',color: '#00CCFF' }}>Get Started</a>
                 </Button>
                 {/* <NavbarDrawer /> */}
               </Box>
@@ -114,6 +116,7 @@ const styles = {
   getStartedDesktop: {
     color: 'primary',
     display: ['none', 'none', 'none', 'none', 'flex'],
+    
   },
   getStartedMobile: {
     color: 'primary',
