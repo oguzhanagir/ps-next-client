@@ -18,33 +18,51 @@ export default function Header() {
               <Box sx={styles.headerInner}>
                 <Logo sx={styles.logo} />
                 <Box as="nav" sx={styles.navbar} className="navbar">
-                  
+
                   <Box as="ul" sx={styles.navList}>
-                 
-                  <li ><Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ana Sayfa</Link></li>
-                  
-                  <li ><Link to="services" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ürünler</Link></li>
-                  <li><Link to="team" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Taşıyıcılar</Link></li>
-                  <li ><Link  to="why-us" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Hakkımızda</Link></li>
-                  <li ><Link to="blog" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">İletişim</Link></li>
-                  
-                  <li className='nav-item'></li>
-                  
+
+                    <li ><Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ana Sayfa</Link></li>
+
+                    <li ><Link to="products" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ürünler</Link></li>
+                    <li><Link to="team" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Taşıyıcılar</Link></li>
+                    <li ><Link to="why-us" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Hakkımızda</Link></li>
+                    <li ><Link to="blog" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">İletişim</Link></li>
+
+                    <li className='nav-item'></li>
+
                   </Box>
-                  
-                  
-                 
-                  <Button variant="text" sx={styles.getStartedDesktop}>
-                    <a href='/login' style={{ textDecoration: 'none',color: '#00CCFF' }}>Login</a>
-                  </Button>
-                  <Button variant="text" sx={styles.getStartedDesktop}>
-                    <a href='/register' style={{ textDecoration: 'none',color: '#00CCFF' }}>Get Started</a>
+
+                  <Button onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/login';
+                  }}
+                    variant="text"
+                    sx={styles.getStartedDesktop}
+                  >Login
                   </Button>
 
+                  <Button onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/register';
+                  }}
+                    variant="text"
+                    sx={styles.getStartedDesktop}
+                  >Hadi Başlayalım
+                  </Button>
+
+                  {/* <a href='/login' style={{ textDecoration: 'none', color: '#00CCFF' }} sx={styles.getStartedDesktop} >
+
+                  </a> */}
+
+                  {/* <a href='/register' style={{ textDecoration: 'none', color: '#00CCFF' }} sx={styles.getStartedDesktop} >
+                    Hadi Başlayalım
+                  </a> */}
+
+
                 </Box>
-                
+
                 <Button variant="text" sx={styles.getStartedMobile}>
-                <a href='/register' style={{ textDecoration: 'none',color: '#00CCFF' }}>Get Started</a>
+                  <a href='/r egister' style={{ textDecoration: 'none', color: '#00CCFF' }}>Get Started</a>
                 </Button>
                 {/* <NavbarDrawer /> */}
               </Box>
@@ -101,7 +119,7 @@ const styles = {
     p: 0,
     'li:last-child': {
       ml: ['auto'],
-      
+
     },
     '.nav-item': {
       cursor: 'pointer',
@@ -116,7 +134,7 @@ const styles = {
   getStartedDesktop: {
     color: 'primary',
     display: ['none', 'none', 'none', 'none', 'flex'],
-    
+
   },
   getStartedMobile: {
     color: 'primary',

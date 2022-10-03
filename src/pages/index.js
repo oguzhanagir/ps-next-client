@@ -10,6 +10,7 @@ import OtherServices from 'sections/other-services';
 import WhyUs from 'sections/why-us';
 import SubscribeUs from 'sections/subscribe-us';
 import Blog from 'sections/blog';
+import Products from '../sections/products'
 
 export default function IndexPage() {
   return (
@@ -22,8 +23,10 @@ export default function IndexPage() {
         <Banner />
         <Services />
         <Testimonials />
-        <OurTeam />
+        
+        <Products/>
         <OtherServices />
+        <OurTeam />
         <WhyUs />
         <Blog />
         <SubscribeUs />
