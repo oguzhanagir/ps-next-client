@@ -12,12 +12,17 @@ const Banner = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Creativity starts with viewing the whole world differently"
+            title="Şirket açıklaması "
             description="A service agency with customer satisfaction"
           />
           <Box as="figure" sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>
-              <Button><a href='/register' style={{ textDecoration: 'none',color: "white" }}>Get Started</a></Button>
+              <Button onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = '/register';
+                  }}
+                  >Hadi Başlayalım
+                  </Button>
             </Box>
             <Image src={illustration} alt="illustration" />
           </Box>

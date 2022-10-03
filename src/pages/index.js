@@ -22,8 +22,7 @@ export default function IndexPage() {
         />
         <Banner />
         <Services />
-        <Testimonials />
-        
+        <Testimonials />  
         <Products/>
         <OtherServices />
         <OurTeam />
