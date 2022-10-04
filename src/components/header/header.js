@@ -5,12 +5,11 @@ import { jsx, Box, Container, Button } from 'theme-ui';
 import Sticky from 'react-stickynode';
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer-provider';
-import { Link } from 'react-scroll';
+import Link from 'next/link';
 
 
 export default function Header() {
-
-  
+ 
 
   return (
     <DrawerProvider>
@@ -24,12 +23,12 @@ export default function Header() {
 
                   <Box as="ul" sx={styles.navList}>
 
-                    <li ><Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ana Sayfa</Link></li>
+                    <li ><Link  href={"/"}><a className="nav-item">Ana Sayfa</a></Link></li>
 
-                    <li ><Link to="products" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Ürünler</Link></li>
-                    <li><Link to="team" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Taşıyıcılar</Link></li>
-                    <li ><Link to="why-us" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">Hakkımızda</Link></li>
-                    <li ><Link to="blog" spy={true} smooth={true} offset={-70} duration={500} className="nav-item">İletişim</Link></li>
+                    <li ><Link href={"/"}><a className="nav-item">Ürünler</a></Link></li>
+                    <li><Link  href={"/"}><a className="nav-item">Taşıyıcılar</a></Link></li>
+                    <li ><Link href={"/"}><a className="nav-item">Hakkımızda</a></Link></li>
+                    <li ><Link  href={"/"}><a className="nav-item">İletişim</a></Link></li>
 
                     <li className='nav-item'></li>
 
@@ -129,6 +128,8 @@ const styles = {
       fontWeight: 400,
       padding: 0,
       margin: [0, 0, 0, 0, '0 20px'],
+      textDecoration: "none",
+      color : "#4F96FF"
     },
     '.active': {
       color: 'primary',

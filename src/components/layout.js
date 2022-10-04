@@ -4,7 +4,7 @@ import { jsx, Flex } from 'theme-ui';
 import React from 'react';
 import Header from './header/header';
 import Footer from './footer/footer';
-export default function Layout({ children }) {
+export default function Layout({ children}) {
   return (
     <Flex
       sx={{
@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         justifyContent: 'space-between',
       }}
     >
-      <Header />
+      <Header/>
       <main
         sx={{
           variant: 'layout.main',
