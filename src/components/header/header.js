@@ -25,7 +25,6 @@ export default function Header() {
 
                     <li className='nav-item'></li>
                     <li ><Link href={"/"}><a className="nav-item">Ana Sayfa</a></Link></li>
-
                     <li ><Link href={"/"}><a className="nav-item">Ürünler</a></Link></li>
                     <li><Link href={"/"}><a className="nav-item">Taşıyıcılar</a></Link></li>
                     <li ><Link href={"/"}><a className="nav-item">Hakkımızda</a></Link></li>

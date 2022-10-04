@@ -335,5 +335,7 @@ export default {
       width: '1px !important',
       whiteSpace: 'nowrap !important',
     },
+    
   },
+  
 };
