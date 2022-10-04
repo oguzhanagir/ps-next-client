@@ -4,7 +4,7 @@ import { jsx, Box, Container, Button, Image, Label, Input } from 'theme-ui';
 import { rgba } from 'polished';
 import SectionHeading from 'components/section-heading';
 import validationSchema from '../components/validation/validation'
-import theme from "theme";
+
 function LoginSec() {
 
     const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
@@ -31,27 +31,25 @@ function LoginSec() {
 
 
                     <Box sx={styles.form}>
-                        <Label >Email</Label>
+                        <Label sx={styles.label} >Email</Label>
                         <Input name="email" onChange={handleChange} value={values.email} onBlur={handleBlur} />
+
+                        <br/>
+                        {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
+
+                        <br /><br />
+                        <Label sx={styles.label}>Şifre</Label>
+                        <Input type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
+                        <br></br>
+                        {errors.password && touched.password && <div className='error'>{errors.password.toLocaleUpperCase()}</div>}
+
                     </Box>
 
-                    {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
-
-                    <br /><br />
-                    <Label >Password</Label>
-                    <Input  type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
-                    {errors.password && touched.password && <div className='error'>{errors.password.toLocaleUpperCase()}</div>}
-
-                    <br /><br />
-                    <Label >Confirm Password</Label>
-                    <Input type={"password"} name="confirmPassword" onChange={handleChange} value={values.confirmPassword} onBlur={handleBlur} />
-                    {errors.confirmPassword && touched.confirmPassword && <div className='error'>{errors.confirmPassword.toLocaleUpperCase()}</div>}
-
                     <br /><br />
 
-                    <br /><br />
+                    <br />
                     <Box sx={styles.buttonWrapper}>
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit">Giriş Yap</Button>
                     </Box>
 
                     <br /><br />
@@ -68,9 +66,10 @@ export default LoginSec;
 
 const styles = {
 
-    input : {
-        color : "white",
-
+    label: {
+        textAlign: 'center',
+        color: "black",
+        fontSize: [20],
     },
 
     section: {
@@ -79,7 +78,7 @@ const styles = {
         pb: [8, null, null, 0],
         zIndex: 0,
         ':before': {
-            backgroundColor: rgba('white', 0.5),
+            backgroundColor: rgba('#FFBD00', 0.7),
             content: ['none', null, null, `''`],
             position: 'absolute',
             left: 0,
@@ -96,8 +95,8 @@ const styles = {
         justifyContent: 'flex-end',
     },
     heading: {
-        mb: [0],
-        ml: [500],
+        mb: [50],
+        ml: ['45%'],
         maxWidth: [null, null, null, 500, 560, 730],
         h2: {
             fontSize: [8, null, null, 8, 9, 10, 11],
@@ -126,9 +125,12 @@ const styles = {
     },
 
     form: {
-        display : "inline-block",
+        display: "inline-block",
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
+        textAlign: 'center',
+        ml: '37%',
+        size : [320],
     },
 
 };
