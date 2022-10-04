@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 
 export default function Header() {
- 
+
 
   return (
     <DrawerProvider>
@@ -23,12 +23,13 @@ export default function Header() {
 
                   <Box as="ul" sx={styles.navList}>
 
-                    <li ><Link  href={"/"}><a className="nav-item">Ana Sayfa</a></Link></li>
+                    <li className='nav-item'></li>
+                    <li ><Link href={"/"}><a className="nav-item">Ana Sayfa</a></Link></li>
 
                     <li ><Link href={"/"}><a className="nav-item">Ürünler</a></Link></li>
-                    <li><Link  href={"/"}><a className="nav-item">Taşıyıcılar</a></Link></li>
+                    <li><Link href={"/"}><a className="nav-item">Taşıyıcılar</a></Link></li>
                     <li ><Link href={"/"}><a className="nav-item">Hakkımızda</a></Link></li>
-                    <li ><Link  href={"/"}><a className="nav-item">İletişim</a></Link></li>
+                    <li ><Link href={"/"}><a className="nav-item">İletişim</a></Link></li>
 
                     <li className='nav-item'></li>
 
@@ -129,7 +130,7 @@ const styles = {
       padding: 0,
       margin: [0, 0, 0, 0, '0 20px'],
       textDecoration: "none",
-      color : "#4F96FF"
+      color: "black"
     },
     '.active': {
       color: 'primary',
