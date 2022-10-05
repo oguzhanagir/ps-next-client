@@ -24,7 +24,7 @@ function LoginSec() {
             <Container>
                 <SectionHeading
                     sx={styles.heading}
-                    title="Login  "
+                    title="Giriş Yap "
                 />
                 <form onSubmit={handleSubmit}>
 
@@ -76,8 +76,8 @@ const styles = {
 
     section: {
         position: 'flex',
-        pt: [105, null, null, 140, 15, null, 220],
-        pb: [8, null, null, 0],
+        pt: [105, null, null, 140, 15, null, 110],
+        pb: [8, null, null, 140],
         zIndex: 0,
         ':before': {
             backgroundColor: rgba('#FFBD00', 0.7),
@@ -98,7 +98,7 @@ const styles = {
     },
     heading: {
         mb: [50],
-        ml: ['45%'],
+        ml: ['42%'],
         maxWidth: [null, null, null, 500, 560, 730],
         h2: {
             fontSize: [8, null, null, 8, 9, 10, 11],

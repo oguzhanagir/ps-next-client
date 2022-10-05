@@ -11,6 +11,7 @@ export default function RegisterSec() {
             name: '',
             surname: '',
             email: '',
+            phone: '',
             password: '',
             confirmPassword: '',
         },
@@ -48,6 +49,17 @@ export default function RegisterSec() {
                         {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
 
                         <br />
+
+
+                        <Label sx={styles.label} >Telefon Numarası</Label>
+                        <Input sx={styles.inputDetail} name="phone" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
+
+                        <br />
+                        {errors.phone && touched.phone && <div className='error'>{errors.phone.toLocaleUpperCase()}</div>}
+
+                        <br />
+
+
                         <Label sx={styles.label}>Şifre</Label>
                         <Input sx={styles.inputDetail} type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
                         <br></br>
@@ -63,11 +75,11 @@ export default function RegisterSec() {
 
                     </Box>
 
-                    <br /><br />
+                    <br />
 
                     
                     <Box sx={styles.buttonWrapper}>
-                        <Button type="submit">Giriş Yap</Button>
+                        <Button type="submit">Kayıt Ol</Button>
                     </Box>
 
 
@@ -130,12 +142,12 @@ const styles = {
         justifyContent: 'flex-end',
     },
     heading: {
-        mb: [40],
-        ml: ['42.3%'],
+        mb: [0],
+        ml: ['44.3%'],
         maxWidth: [null, null, null, 500, 560, 730],
         h2: {
-            fontSize: [8, null, null, 8, 9, 10, 11],
-            lineHeight: [1.57],
+            fontSize: [8, null, null, 8, 9, 10, 9],
+            lineHeight: [0.5],
         },
         p: {
             fontSize: [1, null, null, 3],
@@ -159,6 +171,7 @@ const styles = {
     },
 
     form: {
+        mt: [8],
         ml: '41%',
 
     },
