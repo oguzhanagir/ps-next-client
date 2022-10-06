@@ -32,15 +32,17 @@ export default function RegisterSec() {
 
 
                     <Box sx={styles.form}>
+
+                        <Box sx={styles.test}>
                         <Label sx={styles.label} >İsim</Label>
                         <Input sx={styles.inputDetailName} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
-
-                        <br/>
-
+                        </Box>
+                     
+                        <Box sx={styles.test2}>
                         <Label sx={styles.label} >Soyad</Label>
                         <Input sx={styles.inputDetailSurname} name="surname" onChange={handleChange} value={values.surname} onBlur={handleBlur} />
-
-                        <br />
+                        </Box>
+                        <br /><br/>
 
                         <Label sx={styles.label} >Email</Label>
                         <Input sx={styles.inputDetail} name="email" onChange={handleChange} value={values.email} onBlur={handleBlur} />
@@ -97,6 +99,17 @@ export default function RegisterSec() {
 
 const styles = {
 
+    test: {
+        display: 'inline-block',
+        pr:[5],
+
+    },
+    test2: {
+        display: 'inline-block'
+
+    },
+
+
     label: {
         textAlign: 'center',
         color: "black",
@@ -104,19 +117,19 @@ const styles = {
     },
 
     inputDetail: {
-        height: [30],
+        height: [35],
         display: "inline-block",
-        width: [220],
+        width: [253],
     },
     inputDetailName: {
-        height: [30],
-        
-        width: [220],
+        height: [35],
+        position : 'flex',
+        width: [115],
     },
     inputDetailSurname: {
-        height: [30],
-        
-        width: [220],
+        height: [35],
+        position : 'absulute',
+        width: [114],
     },
 
     section: {
@@ -166,13 +179,14 @@ const styles = {
     buttonWrapper: {
         textAlign: ['center'],
         position: ['static', null, null, 'relative'],
-        left: '50%',
+        left: '49%',
         transform: ['unset', null, null, 'translateX(-50%)'],
+        mb: [50],
     },
 
     form: {
         mt: [8],
-        ml: '41%',
+        ml: '39%',
 
     },
 
