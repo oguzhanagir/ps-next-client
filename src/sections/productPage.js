@@ -181,7 +181,7 @@ const styles = {
   },
   teamWrapper: {
     position: 'relative',
-    pl: [6],
+    pl: [0],
     pr: [6, null, null, 0],
     transition: '0.3s ease-in-out 0s',
     '.swiper-arrow': {

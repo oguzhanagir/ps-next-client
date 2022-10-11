@@ -18,8 +18,9 @@ export default function Product() {
                 />
                 </Container>
                 <ProductTest/>
-                <ProductPage />
-                <ProductPage />
+                <ProductTest/>
+                <ProductTest/>
+                <ProductTest/>
                 <ProductPage />
                 <SubscribeUs />
             </Layout>
