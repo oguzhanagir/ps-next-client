@@ -1,23 +1,19 @@
-import { ThemeProvider } from 'theme-ui';
-import theme from 'theme';
 import Layout from "components/layout"
+import theme from "theme"
+import { ThemeProvider } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
 import { Container } from 'theme-ui';
-import CarrierCard from 'sections/carrier-card';
 
-export default function Carrier() {
+export default function User() {
     return (
         <ThemeProvider theme={theme}>
             <Layout>
                 <Container>
                     <SectionHeading
                         sx={styles.heading}
-                        title="Taşıyıcılar"
+                        title="Kullanıcı Ekranı"
                     />
                 </Container>
-                <CarrierCard />
-                <CarrierCard />
-                <CarrierCard />
             </Layout>
         </ThemeProvider>
     )

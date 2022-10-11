@@ -33,7 +33,7 @@ function LoginSec() {
                         <Label sx={styles.label} >Email</Label>
                         <Input sx={styles.inputDetail} name="email" onChange={handleChange} value={values.email} onBlur={handleBlur} />
 
-                        <br/>
+                        <br />
                         {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
 
                         <br /><br />
@@ -46,7 +46,7 @@ function LoginSec() {
 
                     <br /><br />
 
-                    
+
                     <Box sx={styles.buttonWrapper}>
                         <Button type="submit">Giriş Yap</Button>
                     </Box>
@@ -64,7 +64,7 @@ function LoginSec() {
 export default LoginSec;
 
 const styles = {
-    inputDetail:{
+    inputDetail: {
         height: [50],
     },
 
@@ -75,7 +75,7 @@ const styles = {
     },
 
     section: {
-        
+
         position: 'flex',
         pt: [105, null, null, 140, 15, null, 110],
         pb: [8, null, null, 140],
@@ -88,6 +88,7 @@ const styles = {
             right: 0,
             bottom: 0,
             height: 1000,
+            top: 75,
             zIndex: -1,
         },
     },
@@ -133,7 +134,7 @@ const styles = {
         justifyContent: 'center',
         textAlign: 'center',
         ml: '37%',
-        size : [320],
+        size: [320],
     },
 
 };
