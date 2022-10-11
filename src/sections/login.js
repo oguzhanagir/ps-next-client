@@ -75,6 +75,7 @@ const styles = {
     },
 
     section: {
+        
         position: 'flex',
         pt: [105, null, null, 140, 15, null, 110],
         pb: [8, null, null, 140],

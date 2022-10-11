@@ -1,4 +1,3 @@
-import UserData from '../assets/data/user'
 import { Box, Container } from 'theme-ui'
 import PruductItem from 'components/cards/pruduct-item';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,12 +7,13 @@ import avatar3 from 'assets/images/team/member3.png';
 import avatar4 from 'assets/images/team/member4.png';
 import Link from 'next/link';
 
+
 const data = [
     {
         id: 1,
         avatar: avatar1,
-        name: 'Ürün Adı 1',
-        designation: 'Ürün Açıklaması',
+        name: 'Taşıyıcı Adı ',
+        designation: 'Taşıyıcı Açıklaması',
         socialLinks: [
 
         ],
@@ -21,8 +21,8 @@ const data = [
     {
         id: 2,
         avatar: avatar2,
-        name: 'Ürün Adı 2',
-        designation: 'Ürün Açıklaması',
+        name: 'Taşıyıcı Adı ',
+        designation: 'Taşıyıcı Açıklaması',
         socialLinks: [
 
         ],
@@ -30,8 +30,8 @@ const data = [
     {
         id: 3,
         avatar: avatar3,
-        name: 'Ürün Adı 3',
-        designation: 'Ürün Açıklaması',
+        name: 'Taşıyıcı Adı ',
+        designation: 'Taşıyıcı Açıklaması',
         socialLinks: [
 
         ],
@@ -39,8 +39,8 @@ const data = [
     {
         id: 4,
         avatar: avatar4,
-        name: 'Ürün Adı 4',
-        designation: 'Ürün Açıklaması',
+        name: 'Taşıyıcı Adı ',
+        designation: 'Taşıyıcı Açıklaması',
         socialLinks: [
 
         ],
@@ -48,38 +48,36 @@ const data = [
     {
         id: 5,
         avatar: avatar1,
-        name: 'Ürün Adı 5',
-        designation: 'Ürün Açıklaması',
+        name: 'Taşıyıcı Adı ',
+        designation: 'Taşıyıcı Açıklaması',
         socialLinks: [
 
         ],
     },
 ]
 
-
-export default function ProductTest() {
+export default function CarrierCard(){
     return (
         
-            <Box sx={styles.section} >
-              
-                <Swiper 
-                    spaceBetween={35}
-                    slidesPerView={5}
-                >
-                    {data?.map((item) => (
-                        <SwiperSlide  key={item.id}>
-                            <Link href={`/productDetail/`}>
-                            <a style={{ textDecoration: 'none', color: '#00CCFF' }}><PruductItem sx={styles.test} member={item} /></a>
-                            </Link>
-                            
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-               
-            </Box>
-    )
+        <Box sx={styles.section} >
+          
+            <Swiper 
+                spaceBetween={35}
+                slidesPerView={5}
+            >
+                {data?.map((item) => (
+                    <SwiperSlide  key={item.id}>
+                        <Link href={`/carrierDetail/`}>
+                        <a style={{ textDecoration: 'none', color: '#00CCFF' }}><PruductItem sx={styles.test} member={item} /></a>
+                        </Link>
+                        
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+           
+        </Box>
+)
 }
-
 
 const styles = {
     test : {

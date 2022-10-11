@@ -1,27 +1,23 @@
 import { ThemeProvider } from 'theme-ui';
 import theme from 'theme';
 import Layout from "components/layout"
-import SubscribeUs from 'sections/subscribe-us';
-import ProductPage from 'sections/productPage';
 import SectionHeading from 'components/section-heading';
 import { Container } from 'theme-ui';
-import ProductTest from 'sections/productTest';
+import CarrierCard from 'sections/carrier-card';
 
-export default function Product() {
-    return (
+export default function Carrier(){
+    return(
         <ThemeProvider theme={theme}>
             <Layout>
-                <Container>
+            <Container>
                     <SectionHeading
                     sx={styles.heading}
-                    title="Ürünler"
+                    title="Taşıyıcılar"
                 />
                 </Container>
-                <ProductTest/>
-                <ProductTest/>
-                <ProductTest/>
-                <ProductPage />
-                <SubscribeUs />
+                <CarrierCard/>
+                <CarrierCard/>
+                <CarrierCard/>
             </Layout>
         </ThemeProvider>
     )
@@ -29,7 +25,7 @@ export default function Product() {
 
 const styles = {
     heading: {
-        mt : [150],
+        mt : [140],
         textAlign : 'center',
         p: {
             maxWidth: 500,

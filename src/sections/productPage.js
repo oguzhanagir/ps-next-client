@@ -6,12 +6,14 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SectionHeading from 'components/section-heading';
 import TeamMember from 'components/cards/team-member';
-
+import PruductItem from 'components/cards/pruduct-item';
+import Link from 'next/link';
 import avatar1 from 'assets/images/team/member1.png';
 import avatar2 from 'assets/images/team/member2.png';
 import avatar3 from 'assets/images/team/member3.png';
 import avatar4 from 'assets/images/team/member4.png';
 import arrowRight from 'assets/images/icons/arrow-right.png';
+
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -56,6 +58,15 @@ const data = [
     id: 5,
     avatar: avatar1,
     name: 'Ürün Adı 5',
+    designation: 'Ürün Açıklaması',
+    socialLinks: [
+      
+    ],
+  },
+  {
+    id: 6,
+    avatar: avatar1,
+    name: 'Ürün Adı 6',
     designation: 'Ürün Açıklaması',
     socialLinks: [
       
@@ -111,8 +122,8 @@ const ProductPage = () => {
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 5,
+      spaceBetween: 35,
     },
     1601: {
       slidesPerView: 5,
@@ -150,14 +161,16 @@ const ProductPage = () => {
 
         <Swiper
           ref={swiperRef}
-          spaceBetween={30}
+          spaceBetween={35}
           watchSlidesVisibility={true}
           slidesPerView={5}
           breakpoints={breakpoints}
         >
           {data?.map((item) => (
             <SwiperSlide key={item.id}>
-              <TeamMember member={item} />
+              <Link href='/productDetail'>
+              <a style={{ textDecoration: 'none', color: '#00CCFF' }}><PruductItem sx={styles.test} member={item} /></a>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
