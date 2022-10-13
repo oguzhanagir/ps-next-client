@@ -24,7 +24,7 @@ export default function Header() {
                   <Box as="ul" sx={styles.navList}>
 
                     <li className='nav-item'></li>
-                    <li ><Link href={"/"}><a className="nav-item">Ana Sayfa</a></Link></li>
+                    <li ><Link href={"/"} className="nav-item"><a className="nav-item">Ana Sayfa</a></Link></li>
                     <li ><Link href={"/product"}><a className="nav-item">Ürünler</a></Link></li>
                     <li><Link href={"/carrier"}><a className="nav-item">Taşıyıcılar</a></Link></li>
                     <li ><Link href={"/aboutUs"}><a className="nav-item">Hakkımızda</a></Link></li>

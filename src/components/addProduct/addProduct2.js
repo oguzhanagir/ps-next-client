@@ -32,8 +32,8 @@ export default function AddProduct2(){
     
     
                         <Box sx={styles.form}>
-    
-                            <Box>
+                            
+                            {/* <Box>
                                 <Label sx={styles.label} >Ürün Fotoğrafı</Label>
                                 <Input formMethod='post' sx={styles.inputDetail} type="file" name="image" id="image" />
                             </Box>
@@ -52,8 +52,8 @@ export default function AddProduct2(){
                                 <Label sx={styles.label} >Ürün Başlığı</Label>
                                 <Input formMethod='post' sx={styles.inputDetail} name="title" onChange={handleChange} value={values.title} onBlur={handleBlur} />
                             </Box>
-                            <br />
-                            {/* <Box >
+                            <br /> */}
+                            <Box >
                                 <Label sx={styles.label} >Ürünün Ağırlığı (kg)</Label>
                                 <Input formMethod='post' sx={styles.inputDetail} name="weight" onChange={handleChange} value={values.weight} onBlur={handleBlur} />
                             </Box>
@@ -68,19 +68,11 @@ export default function AddProduct2(){
                                 <Input formMethod='post' sx={styles.inputDetail} name="height" onChange={handleChange} value={values.height} onBlur={handleBlur} />
                             </Box>
                             <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürünün Gönderileceği Adres </Label>
-                                <Select formMethod='post' sx={styles.selectDetail} name="adress" onChange={handleChange} value={values.adress} onBlur={handleBlur} >
-                                    <option>test1</option>
-                                    <option>test2</option>
-                                </Select>
-                            </Box> */}
+                            
                             <br />
                         </Box>
                         <br />
-                        <Box sx={styles.buttonWrapper}>
-                            <Button type="submit">İleri</Button>
-                        </Box>
+                        
                     </form>
                 </Container>
             </Box>
@@ -108,23 +100,7 @@ export default function AddProduct2(){
             transform: ['unset', null, null, 'translateX(-50%)'],
             mb: [50],
         },
-        section: {
-            position: 'flex',
-            pt: [50, null, null, 140, 15, null, 0],
-            pb: [0, null, null, 0],
-            zIndex: 0,
-            ':before': {
-                backgroundColor: rgba('#FFBD00', 0.7),
-                content: ['none', null, null, `''`],
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: 1000,
-                top: 77,
-                zIndex: -1,
-            },
-        },
+        
         contentWrapper: {
             display: 'flex',
             alignItems: 'center',
