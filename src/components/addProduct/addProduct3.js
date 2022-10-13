@@ -1,6 +1,7 @@
 import { rgba } from 'polished';
 import { jsx, Box, Container, Button, Image, Label, Input, Select } from 'theme-ui';
 import { useFormik } from 'formik';
+import Link from 'next/link';
 
 
 
@@ -9,6 +10,9 @@ export default function AddProduct2(){
         const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
             initialValues: {
                 
+                name: '',
+                description: '',
+                title: '',
                 weight: '',
                 width: '',
                 height: '',
@@ -32,41 +36,8 @@ export default function AddProduct2(){
     
     
                         <Box sx={styles.form}>
-                            <h1>3.Sayfa</h1>
-                            {/* <Box>
-                                <Label sx={styles.label} >Ürün Fotoğrafı</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} type="file" name="image" id="image" />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün İsmi</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün Açıklaması</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün Başlığı</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="title" onChange={handleChange} value={values.title} onBlur={handleBlur} />
-                            </Box> */}
-                            <br />
-                            {/* <Box >
-                                <Label sx={styles.label} >Ürünün Ağırlığı (kg)</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="weight" onChange={handleChange} value={values.weight} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürünün Eni (cm) </Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="width" onChange={handleChange} value={values.width} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürünün Boyu (cm) </Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="height" onChange={handleChange} value={values.height} onBlur={handleBlur} />
-                            </Box>
+                         
+                           
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürünün Gönderileceği Adres </Label>
@@ -74,12 +45,12 @@ export default function AddProduct2(){
                                     <option>test1</option>
                                     <option>test2</option>
                                 </Select>
-                            </Box> */}
+                            </Box>
                             <br />
                         </Box>
                         <br />
                         <Box sx={styles.buttonWrapper}>
-                            <Button type="submit">İleri</Button>
+                            <Button type="submit" >Gönder</Button>
                         </Box>
                     </form>
                 </Container>
@@ -108,23 +79,7 @@ export default function AddProduct2(){
             transform: ['unset', null, null, 'translateX(-50%)'],
             mb: [50],
         },
-        section: {
-            position: 'flex',
-            pt: [50, null, null, 140, 15, null, 0],
-            pb: [0, null, null, 0],
-            zIndex: 0,
-            ':before': {
-                backgroundColor: rgba('#FFBD00', 0.7),
-                content: ['none', null, null, `''`],
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: 1000,
-                top: 77,
-                zIndex: -1,
-            },
-        },
+       
         contentWrapper: {
             display: 'flex',
             alignItems: 'center',

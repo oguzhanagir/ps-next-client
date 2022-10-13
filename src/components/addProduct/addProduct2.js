@@ -9,6 +9,9 @@ export default function AddProduct2(){
         const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
             initialValues: {
                 
+                name: '',
+                description: '',
+                title: '',
                 weight: '',
                 width: '',
                 height: '',
@@ -33,39 +36,20 @@ export default function AddProduct2(){
     
                         <Box sx={styles.form}>
                             
-                            {/* <Box>
-                                <Label sx={styles.label} >Ürün Fotoğrafı</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} type="file" name="image" id="image" />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün İsmi</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün Açıklaması</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleBlur} />
-                            </Box>
-                            <br />
-                            <Box >
-                                <Label sx={styles.label} >Ürün Başlığı</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="title" onChange={handleChange} value={values.title} onBlur={handleBlur} />
-                            </Box>
-                            <br /> */}
+                           
                             <Box >
                                 <Label sx={styles.label} >Ürünün Ağırlığı (kg)</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="weight" onChange={handleChange} value={values.weight} onBlur={handleBlur} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="weight" onChange={handleChange} value={values.weight} onBlur={handleSubmit} />
                             </Box>
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürünün Eni (cm) </Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="width" onChange={handleChange} value={values.width} onBlur={handleBlur} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="width" onChange={handleChange} value={values.width} onBlur={handleSubmit} />
                             </Box>
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürünün Boyu (cm) </Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="height" onChange={handleChange} value={values.height} onBlur={handleBlur} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="height" onChange={handleChange} value={values.height} onBlur={handleSubmit} />
                             </Box>
                             <br />
                             
