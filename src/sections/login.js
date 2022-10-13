@@ -4,6 +4,8 @@ import { jsx, Box, Container, Button, Image, Label, Input } from 'theme-ui';
 import { rgba } from 'polished';
 import SectionHeading from 'components/section-heading';
 import validationSchema from '../components/validation/validation'
+import Link from "next/link";
+
 
 function LoginSec() {
 
@@ -41,12 +43,13 @@ function LoginSec() {
                         <Input sx={styles.inputDetail} type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
                         <br></br>
                         {errors.password && touched.password && <div className='error'>{errors.password.toLocaleUpperCase()}</div>}
-
+                        <br/>
+                        <Link  href={"/forgotPassword"}><a sx={styles.test}>Şifremi unuttum</a></Link>
                     </Box>
 
                     <br /><br />
 
-
+                    
                     <Box sx={styles.buttonWrapper}>
                         <Button type="submit">Giriş Yap</Button>
                     </Box>
@@ -64,6 +67,10 @@ function LoginSec() {
 export default LoginSec;
 
 const styles = {
+    test: {
+      textDecoration: "none",
+      color: "black"
+    },
     inputDetail: {
         height: [50],
     },
@@ -123,7 +130,7 @@ const styles = {
     buttonWrapper: {
         textAlign: ['center'],
         position: ['static', null, null, 'relative'],
-        left: '50%',
+        left: '50.5%',
 
         transform: ['unset', null, null, 'translateX(-50%)'],
     },

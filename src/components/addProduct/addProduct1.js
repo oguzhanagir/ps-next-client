@@ -11,12 +11,6 @@ export default function AddProduct1(){
                 name: '',
                 description: '',
                 title: '',
-                weight: '',
-                width: '',
-                height: '',
-                adress: '',
-                price: '',
-                size: '',
                 image: '',
             },
             onSubmit: values => {
@@ -39,12 +33,12 @@ export default function AddProduct1(){
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürün İsmi</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleSubmit} />
                             </Box>
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürün Açıklaması</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleBlur} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleSubmit} />
                             </Box>
                             <br />
                             <Box >

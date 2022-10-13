@@ -3,26 +3,24 @@ import { jsx, Box, Container, Button, Image, Label, Input, Select } from 'theme-
 import { useState } from 'react';
 import { rgba } from 'polished';
 
+import AddCarrierPage1 from 'components/addCarrier/addCarrierPage1';
+import AddCarrierPage2 from 'components/addCarrier/addCarrierPage2';
+import AddCarrierPage3 from 'components/addCarrier/addCarrierPage3';
 
-
-import ProductPage2 from 'components/addProduct/addProduct2';
-import ProductPage1 from '../components/addProduct/addProduct1'
-import ProductPage3 from '../components/addProduct/addProduct3'
-
-export default function AddProductSection() {
+export default function AddCarrierSection() {
 
     const component = () => {
         switch (page) {
             case 0:
-                return <><ProductPage1 /></>
+                return <AddCarrierPage1 />
                 break;
             case 1:
-                return <ProductPage2 />
+                return <AddCarrierPage2 />
                 break;
             case 2:
-                return <ProductPage3 />
+                return <AddCarrierPage3 />
                 break;
-            default: <ProductPage1 />
+            default:
                 break;
         }
     }
@@ -31,13 +29,15 @@ export default function AddProductSection() {
         setPage(page + 1);
     }
 
+
+
     return (
         <Box sx={styles.section}>
-
             <SectionHeading
                 sx={styles.heading}
-                title="Ürün Ekle"
+                title="Taşıyıcı Ekle"
             />
+
             {component()}
             <Box sx={styles.buttonWrapper}>
 
@@ -45,11 +45,13 @@ export default function AddProductSection() {
 
             </Box>
 
+
         </Box>
-
-
     )
 }
+
+
+
 
 const styles = {
     heading: {
@@ -85,5 +87,3 @@ const styles = {
         },
     },
 }
-
-

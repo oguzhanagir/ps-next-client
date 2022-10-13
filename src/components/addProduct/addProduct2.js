@@ -9,16 +9,12 @@ export default function AddProduct2(){
         const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
             initialValues: {
                 
-                name: '',
-                description: '',
-                title: '',
+                
                 weight: '',
                 width: '',
                 height: '',
-                adress: '',
-                price: '',
                 size: '',
-                image: '',
+                
             },
             onSubmit: values => {
                 console.log(JSON.stringify(values, null, 2));
