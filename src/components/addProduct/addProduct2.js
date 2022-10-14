@@ -52,7 +52,9 @@ export default function AddProduct2(){
                             <br />
                         </Box>
                         <br />
-                        
+                        <Box sx={styles.buttonWrapper}>
+                            <Button type="submit" onClick={pageChange} >İleri</Button>
+                        </Box>
                     </form>
                 </Container>
             </Box>

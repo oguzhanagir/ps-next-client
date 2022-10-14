@@ -33,24 +33,26 @@ export default function AddProduct1(){
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürün İsmi</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleSubmit} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
                             </Box>
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürün Açıklaması</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleSubmit} />
+                                <Input formMethod='post' sx={styles.inputDetail} name="description" onChange={handleChange} value={values.description} onBlur={handleBlur} />
                             </Box>
                             <br />
                             <Box >
                                 <Label sx={styles.label} >Ürün Başlığı</Label>
-                                <Input formMethod='post' sx={styles.inputDetail} name="title" onChange={handleChange} value={values.title} onBlur={handleSubmit}  />
+                                <Input formMethod='post' sx={styles.inputDetail} name="title" onChange={handleChange} value={values.title} onBlur={handleBlur}  />
                             </Box>
                             <br />
-                           
+
                             <br />
                         </Box>
                         <br />
-                        
+                        <Box sx={styles.buttonWrapper}>
+                            <Button  onClick={pageChange} >İleri</Button>
+                        </Box>
                     </form>
                 </Container>
             </Box>

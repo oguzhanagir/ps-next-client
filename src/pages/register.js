@@ -3,7 +3,7 @@ import theme from 'theme';
 import Banner from "sections/banner"
 import Layout from "components/layout"
 import SubscribeUs from 'sections/subscribe-us';
-import RegisterSec from 'sections/register';
+import RegisterSection from 'sections/register';
 
 
 export default function Register() {
@@ -11,9 +11,7 @@ export default function Register() {
         <div>
             <ThemeProvider theme={theme}>
             <Layout>
-
-            <RegisterSec/>
-            
+            <RegisterSection/>
             <SubscribeUs/>
             </Layout>
             </ThemeProvider>

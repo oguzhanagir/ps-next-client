@@ -1,9 +1,8 @@
 import { ThemeProvider } from 'theme-ui';
 import theme from 'theme';
-import Banner from "sections/banner"
 import Layout from "components/layout"
 import SubscribeUs from 'sections/subscribe-us';
-import LoginSec from 'sections/login';
+import LoginSection from 'sections/login';
 
 export default function Login() {
     
@@ -11,7 +10,7 @@ export default function Login() {
         <div>
             <ThemeProvider theme={theme}>
             <Layout >
-            <LoginSec/>
+            <LoginSection/>
             <SubscribeUs/>
             </Layout>
             </ThemeProvider>

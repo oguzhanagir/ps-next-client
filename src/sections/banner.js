@@ -12,8 +12,8 @@ const Banner = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Şirket açıklaması "
-            description="A service agency with customer satisfaction"
+            title="Şirket Açıklaması "
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           />
           <Box as="figure" sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>

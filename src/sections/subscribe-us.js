@@ -25,8 +25,8 @@ const SubscribeUs = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Like our service? Subscribe us"
-            description="We have more than thousand of creative entrepreneurs and stat joining our business"
+            title="Hizmetimizi beğendiniz mi? Bize abone olun"
+            description="Binden fazla kullanıcımız var tasarruf ediyor"
           />
           <Box as="form" sx={styles.subscribe} onSubmit={handleSubmit}>
             <Flex sx={styles.inputGroup}>
@@ -37,26 +37,11 @@ const SubscribeUs = () => {
                 id="email"
                 type="email"
                 className="email-input"
-                placeholder="Enter Email address"
+                placeholder="Email Adresinizi Giriniz"
               />
-              <Button variant="secondary">Subscribe</Button>
+              <Button variant="secondary">Abone Olun</Button>
             </Flex>
-            <Box sx={styles.checkbox}>
-              <Label htmlFor="no_spam" className={checked ? 'checked' : ''}>
-                <Checkbox
-                  id="no_spam"
-                  onChange={handleCheckbox}
-                  defaultChecked={checked}
-                />
-                Don’t provide any promotional message.
-              </Label>
-              {/* <Checkbox
-                id="no_spam"
-                checked={checked}
-                onChange={handleCheckbox}
-                label="Don’t provide any promotional message."
-              /> */}
-            </Box>
+
           </Box>
         </Box>
       </Container>
@@ -115,29 +100,5 @@ const styles = {
   inputGroup: {
     flexDirection: ['column', null, null, 'row'],
   },
-  checkbox: {
-    mt: ['24px'],
-    label: {
-      display: 'flex',
-      alignItems: 'center',
-      cursor: 'pointer',
-      fontSize: '14px',
-      fontWeight: 400,
-      lineHeight: 1.14,
-      color: rgba('#9095AD', 0.9),
-      zIndex: 10,
-      svg: {
-        path: {
-          fill: '#EFF3F7',
-        },
-      },
-      '&.checked': {
-        svg: {
-          path: {
-            fill: 'primary',
-          },
-        },
-      },
-    },
-  },
+
 };

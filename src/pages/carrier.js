@@ -12,7 +12,7 @@ export default function Carrier() {
                 <Container>
                     <SectionHeading
                         sx={styles.heading}
-                        title="Taşıyıcılar"
+                        title="Yolcular"
                     />
                 </Container>
                 <CarrierCard />

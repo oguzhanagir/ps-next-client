@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import { jsx, Box, Container, Button, Image, Label, Input } from 'theme-ui';
 import { rgba } from 'polished';
 import SectionHeading from 'components/section-heading';
-import validationSchema from '../components/validation/validation'
+import validationSchema from '../../validation/validation'
 
 export default function RegisterSec() {
     const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
@@ -138,7 +138,7 @@ const styles = {
         pb: [8, null, null, 0],
         zIndex: 0,
         ':before': {
-            backgroundColor: rgba('#FFBD00', 0.7),
+            backgroundColor: rgba('#fff', 0.7),
             content: ['none', null, null, `''`],
             position: 'absolute',
             left: 0,
