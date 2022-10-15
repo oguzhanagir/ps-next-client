@@ -4,6 +4,9 @@ import { jsx, Box, Container, Button, Image, Label, Input } from 'theme-ui';
 import { rgba } from 'polished';
 import SectionHeading from 'components/section-heading';
 import validationSchema from '../../validation/validation'
+import image from '../assets/images/team/member2.png'
+
+
 
 export default function RegisterSec() {
     const { handleSubmit, handleChange, values, errors, touched, handleBlur } = useFormik({
@@ -23,75 +26,78 @@ export default function RegisterSec() {
 
     return (
         <Box sx={styles.section} >
+            <Image src={image} sx={styles.image} />
             <Container>
-                <SectionHeading
-                    sx={styles.heading}
-                    title="Kayıt Ol "
-                />
-                <form onSubmit={handleSubmit}>
+
+                <Box sx={styles.position}>
+                    <form onSubmit={handleSubmit}>
 
 
-                    <Box sx={styles.form}>
+                        <SectionHeading
+                            sx={styles.heading}
+                            title="Kayıt Ol "
+                        />
+                        <Box sx={styles.form}>
 
-                        <Box sx={styles.test}>
-                        <Label sx={styles.label} >İsim</Label>
-                        <Input sx={styles.inputDetailName} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
+                            <Box sx={styles.test}>
+                                <Label sx={styles.label} >İsim</Label>
+                                <Input sx={styles.inputDetailName} name="name" onChange={handleChange} value={values.name} onBlur={handleBlur} />
+                            </Box>
+
+                            <Box sx={styles.test2}>
+                                <Label sx={styles.label} >Soyad</Label>
+                                <Input sx={styles.inputDetailSurname} name="surname" onChange={handleChange} value={values.surname} onBlur={handleBlur} />
+                            </Box>
+                            <br /><br />
+
+                            <Label sx={styles.label} >Email</Label>
+                            <Input sx={styles.inputDetail} name="email" onChange={handleChange} value={values.email} onBlur={handleBlur} />
+
+                            <br />
+                            {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
+
+                            <br />
+
+
+                            <Label sx={styles.label} >Telefon Numarası</Label>
+                            <Input sx={styles.inputDetail} name="phone" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
+
+                            <br />
+                            {errors.phone && touched.phone && <div className='error'>{errors.phone.toLocaleUpperCase()}</div>}
+
+                            <br />
+
+
+                            <Label sx={styles.label}>Şifre</Label>
+                            <Input sx={styles.inputDetail} type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
+                            <br></br>
+                            {errors.password && touched.password && <div className='error'>{errors.password.toLocaleUpperCase()}</div>}
+
+                            <br />
+
+                            <Label sx={styles.label} >Confirm Password</Label>
+                            <Input sx={styles.inputDetail} type={"password"} name="confirmPassword" onChange={handleChange} value={values.confirmPassword} onBlur={handleBlur} />
+                            {errors.confirmPassword && touched.confirmPassword && <div className='error'>{errors.confirmPassword.toLocaleUpperCase()}</div>}
+
+                            <br /><br />
+
+                            <Box sx={styles.buttonWrapper}>
+                                <Button type="submit">Kayıt Ol</Button>
+                            </Box>
+
                         </Box>
-                     
-                        <Box sx={styles.test2}>
-                        <Label sx={styles.label} >Soyad</Label>
-                        <Input sx={styles.inputDetailSurname} name="surname" onChange={handleChange} value={values.surname} onBlur={handleBlur} />
-                        </Box>
-                        <br /><br/>
-
-                        <Label sx={styles.label} >Email</Label>
-                        <Input sx={styles.inputDetail} name="email" onChange={handleChange} value={values.email} onBlur={handleBlur} />
 
                         <br />
-                        {errors.email && touched.email && <div className='error'>{errors.email.toLocaleUpperCase()}</div>}
-
-                        <br />
-
-
-                        <Label sx={styles.label} >Telefon Numarası</Label>
-                        <Input sx={styles.inputDetail} name="phone" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
-
-                        <br />
-                        {errors.phone && touched.phone && <div className='error'>{errors.phone.toLocaleUpperCase()}</div>}
-
-                        <br />
-
-
-                        <Label sx={styles.label}>Şifre</Label>
-                        <Input sx={styles.inputDetail} type={"password"} name="password" onChange={handleChange} value={values.password} onBlur={handleBlur} />
-                        <br></br>
-                        {errors.password && touched.password && <div className='error'>{errors.password.toLocaleUpperCase()}</div>}
-
-                        <br />
-
-                        <Label sx={styles.label} >Confirm Password</Label>
-                        <Input sx={styles.inputDetail} type={"password"} name="confirmPassword" onChange={handleChange} value={values.confirmPassword} onBlur={handleBlur} />
-                        {errors.confirmPassword && touched.confirmPassword && <div className='error'>{errors.confirmPassword.toLocaleUpperCase()}</div>}
-
                         <br /><br />
 
-                    </Box>
+                    </form>
 
-                    <br />
-
-                    
-                    <Box sx={styles.buttonWrapper}>
-                        <Button type="submit">Kayıt Ol</Button>
-                    </Box>
-
-
-
-                    <br /><br />
-
-
-                </form>
+                </Box>
 
             </Container>
+
+
+
         </Box>
 
     )
@@ -99,13 +105,30 @@ export default function RegisterSec() {
 
 const styles = {
 
+    image: {
+        ml: ['61%'],
+        mt: [140],
+        position: 'absolute',
+        width: 408,
+        height: 408,
+        borderRadius: 4,
+
+    },
+
+    position: {
+        mt: [50],
+        mr: ['65%'],
+        mb: [100],
+
+    },
+
     test: {
         display: 'inline-block',
-        pr:[5],
+        pr: [5],
 
     },
     test2: {
-        display: 'inline-block'
+        display: 'inline-block',
 
     },
 
@@ -120,23 +143,30 @@ const styles = {
         height: [35],
         display: "inline-block",
         width: [253],
+        borderColor: 'black',
+        boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`,
     },
     inputDetailName: {
         height: [35],
-        position : 'flex',
+        position: 'flex',
         width: [115],
+        borderColor: 'black',
+        boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`,
     },
     inputDetailSurname: {
         height: [35],
-        position : 'absulute',
+        position: 'absulute',
         width: [114],
+        borderColor: 'black',
+        boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`,
     },
 
     section: {
         position: 'flex',
-        pt: [50, null, null, 140, 15, null, 110],
+        pt: [20, null, null, 140, 15, null, 90],
         pb: [8, null, null, 0],
         zIndex: 0,
+        display: 'block',
         ':before': {
             backgroundColor: rgba('#fff', 0.7),
             content: ['none', null, null, `''`],
@@ -145,7 +175,7 @@ const styles = {
             right: 0,
             bottom: 0,
             height: 1000,
-            top:77,
+            top: 77,
             zIndex: -1,
         },
     },
@@ -156,8 +186,8 @@ const styles = {
         justifyContent: 'flex-end',
     },
     heading: {
-        mb: [0],
-        ml: ['44.3%'],
+       
+        ml: ['52%'],
         maxWidth: [null, null, null, 500, 560, 730],
         h2: {
             fontSize: [8, null, null, 8, 9, 10, 9],
@@ -180,13 +210,14 @@ const styles = {
     buttonWrapper: {
         textAlign: ['center'],
         position: ['static', null, null, 'relative'],
-        left: '49%',
+        left: '47%',
         transform: ['unset', null, null, 'translateX(-50%)'],
-        mb: [50],
+        mt: [4],
+        mb: [55],
     },
 
     form: {
-        mt: [8],
+        mt: [7],
         ml: '39%',
 
     },

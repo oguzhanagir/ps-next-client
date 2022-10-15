@@ -197,6 +197,10 @@ const styles = {
             zIndex: -1,
         },
     },
+
+    inputDetail:{
+        borderColor: 'black',
+    }
 }
 
 

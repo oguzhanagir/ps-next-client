@@ -157,9 +157,9 @@ export default {
   },
   images: {
     avatar: {
-      width: 48,
-      height: 48,
-      borderRadius: 99999,
+      width: 408,
+      height: 408,
+      borderRadius: 4,
     },
   },
   // variants for buttons
@@ -255,6 +255,7 @@ export default {
       borderRadius: 8,
       borderColor: 'borderColor',
       height: 60,
+  
       '&:focus': {
         borderColor: 'primary',
         boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,

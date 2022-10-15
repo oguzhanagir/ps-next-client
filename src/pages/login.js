@@ -4,12 +4,13 @@ import Layout from "components/layout"
 import SubscribeUs from 'sections/subscribe-us';
 import LoginSection from 'sections/login';
 
+
 export default function Login() {
     
     return(
         <div>
             <ThemeProvider theme={theme}>
-            <Layout >
+            <Layout  >
             <LoginSection/>
             <SubscribeUs/>
             </Layout>
@@ -19,3 +20,5 @@ export default function Login() {
         </div>
     )
 }
+
+
