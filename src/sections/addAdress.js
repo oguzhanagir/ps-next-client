@@ -1,17 +1,20 @@
 import { jsx, Box, Container, Image, Text } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
+import AddUserAdress from 'components/addAdress/addUserAdress';
 
-
-export default function UserDetail() {
+export default function AddAdress() {
     return(
         <Container>
-        <SectionHeading
+            <SectionHeading 
             sx={styles.heading}
-            title="Kullanıcı Ekranı"
-        />
-    </Container>
+            title={"Adres Ekle "}
+            />
+            <AddUserAdress/>
+        </Container>
     )
 }
+
+
 
 const styles = {
     heading: {
