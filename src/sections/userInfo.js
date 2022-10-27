@@ -1,25 +1,40 @@
 import { jsx, Box, Container, Image, Text } from 'theme-ui';
 import SectionHeading from 'components/section-heading';
-
+import UserInfo from 'components/user/userInfo';
+import { rgba } from 'polished';
 
 export default function UserDetail() {
     return(
-        <Container>
-        <SectionHeading
-            sx={styles.heading}
-            title="Kullanıcı Ekranı"
-        />
+        <Container sx={styles.section}>
+        
+        <UserInfo/>
     </Container>
     )
 }
 
+
+
+
+
 const styles = {
-    heading: {
-        mt: [140],
-        textAlign: 'center',
-        p: {
-            maxWidth: 500,
-            m: '20px auto 0',
+    section: {
+
+        position: 'flex',
+        pt: [1, null, null, 40, 15, null, 110],
+        pb: [8, null, null, 0],
+        zIndex: 0,
+        display: 'block',
+
+        ':before': {
+            backgroundColor: rgba('#fff', 0.7),
+            content: ['none', null, null, `''`],
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: 0,
+            top: 75,
+            zIndex: -1,
         },
     },
 }
