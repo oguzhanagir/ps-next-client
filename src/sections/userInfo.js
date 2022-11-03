@@ -24,16 +24,16 @@ const styles = {
         pb: [8, null, null, 0],
         zIndex: 0,
         display: 'block',
-
+       
         ':before': {
-            backgroundColor: rgba('#fff', 0.7),
+            backgroundColor: rgba('#FFBD00', 0.7),
             content: ['none', null, null, `''`],
             position: 'absolute',
             left: 0,
             right: 0,
             bottom: 0,
-            height: 0,
-            top: 75,
+            height: 1000,
+            top: 77,
             zIndex: -1,
         },
     },

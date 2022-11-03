@@ -1,4 +1,4 @@
-import { jsx, Box, Container, Image, Text } from 'theme-ui';
+import { jsx, Box, Container, Image, Text, Button } from 'theme-ui';
 import userImage from '../../assets/images/user/user1.png'
 
 
@@ -9,7 +9,7 @@ export default function UserInfo() {
             <Box sx={styles.userBox}>
                 <Image src={userImage} sx={styles.userAvatar} />
             </Box>
-            <Box>
+            <Box sx={styles.userInfo} >
                 <h3>İsim : APİ </h3>
                 <h3>Soyad : APİ </h3>
                 <h3>Email : APİ </h3>
@@ -17,6 +17,9 @@ export default function UserInfo() {
                 <h3>Araba : APİ </h3>
                 <h3>Adress : APİ </h3>
             </Box>
+            <Button sx={styles.buttonWrapper} >
+                Bilgileri Güncelle
+            </Button>
         </Container>
     )
     
@@ -33,5 +36,16 @@ const styles = {
     },
     userBox : {
         position: 'flex',
+    },
+    buttonWrapper: {
+        textAlign: ['center'],
+        position: ['static', null, null, 'relative'],
+        left: '7.5%',
+        mt : [23],
+        transform: ['unset', null, null, 'translateX(-50%)'],
+        backgroundColor: '#00CCFF',
+    },
+    userInfo: {
+        ml : [3],
     }
 }

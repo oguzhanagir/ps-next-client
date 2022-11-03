@@ -64,7 +64,7 @@ export default function Header() {
                 </Box>
 
                 <Button variant="text" sx={styles.getStartedMobile}>
-                  <a href='/r egister' style={{ textDecoration: 'none', color: '#00CCFF' }}>Get Started</a>
+                  <a href='/register' style={{ textDecoration: 'none', color: '#00CCFF' }}>Get Started</a>
                 </Button>
                 {/* <NavbarDrawer /> */}
               </Box>
